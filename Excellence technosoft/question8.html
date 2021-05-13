@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <h4>QUESTION 8</h4>
+<p>Write a code to sort the object by id </p>
+<script>
+var obj = [
+    {
+        "id": 4,
+        "name": "abc"
+    },
+    {
+        "id": 10,
+        "name": "ab2"
+    },
+    {
+        "id": 5,
+        "name": "abc3"
+    },
+    {
+        "id": 6,
+        "name": "abc5"
+    }
+];
+
+obj.sort(function(a, b) {
+    return (a.id - b.id);
+}).sort(function(a, b) {
+    return (a.name - b.name);
+});
+
+console.log(obj);
+</script>
+</body>
+</html>

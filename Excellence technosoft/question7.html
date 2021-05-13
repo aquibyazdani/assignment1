@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <h3 id=ipText1></h3>
+    <h3 id=ipText2></h3>
+    <h3 id=ipText3></h3>
+    <script>
+  fetch('https://www.boredapi.com/api/activity')
+  .then((response) => {
+    return response.json();
+  })
+  .then((myJson) => {
+    console.log(myJson);
+    document.querySelector("#ipText1").innerHTML = myJson.activity;
+    document.querySelector("#ipText2").innerHTML = myJson.type;
+    document.querySelector("#ipText3").innerHTML = myJson.participants;
+
+
+  });
+
+  </script>
+
+</body>
+</html>

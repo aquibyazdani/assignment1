@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body style="text-align: center;">
+
+<h2>Question 4</h2>
+<p>For the above form, write validation in javascript so that if the firstname is empty or if checkme is not checked, it will not allow the form to submit.
+</p>
+
+
+    <form name="feedback" action="#" method=post>
+        Name : <input type="text" name="firstname"/> <br/><br/>
+        Check: <input type="checkbox" name="checkme"/>  <br/> <br/>
+        <input type="submit" name="SubmitButton" value="Submit" onClick="ValidateForm(this.form)"/>
+        </form>
+
+
+<script>
+    function ValidateForm(form){
+ErrorText= "";
+if ( form.checkme.checked == false )
+{
+alert ("Checkbox should be checked" );
+return false;
+} else if (form.firstname.value == "" ) {
+    alert ("Name shouldn't remain empty")
+}
+if (ErrorText= "") { form.submit() }
+}
+</script>
+
+</body>
+</html>
